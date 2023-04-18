@@ -1,0 +1,27 @@
+
+<div class="card flex flex-wrap flex-column align-items-center gap-2">
+    <p-toast></p-toast>
+    <p-confirmDialog [style]="{ width: '50vw' }" key="positionDialog" [position]="position" rejectButtonStyleClass="p-button-outlined"></p-confirmDialog>
+    <div class="flex flex-wrap justify-content-center gap-2">
+        <p-button (click)="confirmPosition('left')" icon="pi pi-arrow-right" label="Left" styleClass="p-button-help"></p-button>
+        <p-button (click)="confirmPosition('right')" icon="pi pi-arrow-left" label="Right" styleClass="p-button-help"></p-button>
+    </div>
+    <div class="flex flex-wrap justify-content-center gap-2">
+        <p-button (click)="confirmPosition('top-left')" icon="pi pi-arrow-down" label="TopLeft" styleClass="p-button-warning"></p-button>
+        <p-button (click)="confirmPosition('top')" icon="pi pi-arrow-down" label="Top" styleClass="p-button-warning"></p-button>
+        <p-button (click)="confirmPosition('top-right')" icon="pi pi-arrow-down" label="TopRight" styleClass="p-button-warning"></p-button>
+    </div>
+    <div class="flex flex-wrap justify-content-center gap-2">
+        <p-button (click)="confirmPosition('bottom-left')" icon="pi pi-arrow-up" label="BottomLeft" styleClass="p-button-success"></p-button>
+        <p-button (click)="confirmPosition('bottom')" icon="pi pi-arrow-up" label="Bottom" styleClass="p-button-success"></p-button>
+        <p-button (click)="confirmPosition('bottom-right')" icon="pi pi-arrow-up" label="BottomRight" styleClass="p-button-success"></p-button>
+    </div>
+</div>
+
+<br>
+<hr>
+<br>
+
+<p-toast></p-toast>
+<p-confirmPopup></p-confirmPopup>
+<p-button (click)="confirm($event)" icon="pi pi-check" label="Confirm"></p-button>
